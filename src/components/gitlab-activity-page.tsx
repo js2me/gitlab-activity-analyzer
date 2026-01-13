@@ -1,6 +1,6 @@
 import ReactECharts from 'echarts-for-react';
 import { withViewModel } from 'mobx-view-model';
-import { GitLabActivityViewModel, type ProjectActivity } from '../model';
+import { GitLabActivityPageVM, type ProjectActivity } from '../model';
 
 const formatDate = (dateString: string) => {
   if (!dateString) return '';
@@ -13,7 +13,7 @@ const formatDate = (dateString: string) => {
 };
 
 export const GitLabActivityPage = withViewModel(
-  GitLabActivityViewModel,
+  GitLabActivityPageVM,
   ({ model }) => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 p-8">

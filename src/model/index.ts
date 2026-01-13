@@ -11,7 +11,7 @@ import type { ProjectActivity } from './types';
 
 export type { ProjectActivity };
 
-export class GitLabActivityViewModel extends ViewModelBase {
+export class GitLabActivityPageVM extends ViewModelBase {
   gitlabUrl = '';
   accessToken = '';
   dateFrom = '';
