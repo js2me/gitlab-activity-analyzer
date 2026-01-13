@@ -1,0 +1,40 @@
+{
+  "name": "tauri-gitlab-activity",
+  "version": "1.0.0",
+  "description": "Простое приложение-счетчик на React + Tauri",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint:check": "pnpm exec biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "echarts": "^6.0.0",
+    "echarts-for-react": "^3.0.5",
+    "mobx": "^6.15.0",
+    "mobx-react-lite": "^4.1.1",
+    "mobx-route": "^0.23.0",
+    "mobx-swiss-knife": "^1.14.0",
+    "mobx-view-model": "^8.10.0",
+    "mobx-web-api": "^1.9.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
+    "@tailwindcss/vite": "^4.1.18",
+    "@tauri-apps/api": "^1.5.3",
+    "@tauri-apps/cli": "^1.5.12",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "js2me-biome-config": "^1.0.8",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  }
+}
