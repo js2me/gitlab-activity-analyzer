@@ -1,5 +1,5 @@
-import { GitLabActivityPage } from './components/gitlab-activity-page';
+import { GitlabActivityPage } from './screens/gitlab-activity';
 
 export const App = () => {
-  return <GitLabActivityPage />;
+  return <GitlabActivityPage />;
 };
