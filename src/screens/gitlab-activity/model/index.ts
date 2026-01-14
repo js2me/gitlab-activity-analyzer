@@ -172,6 +172,9 @@ export class GitLabActivityPageVM extends ViewModelBase {
       const baseUrl = this.gitlabUrl.replace(/\/$/, '');
       const apiUrl = `${baseUrl}/api/v4`;
 
+      // максимум 100 можно (бэк возвращает заголовок x-per-page - макс значение 100 несмотря на per_page квери параметр)
+      const eventsPerPage = 100;
+
       // Получаем текущего пользователя
       const userResponse = await fetch(`${apiUrl}/user`, {
         headers: {
@@ -188,7 +191,7 @@ export class GitLabActivityPageVM extends ViewModelBase {
       const currentUser = await userResponse.json();
 
       // Получаем события пользователя за период используя endpoint для конкретного пользователя
-      const eventsUrl = `${apiUrl}/users/${currentUser.id}/events?after=${this.dateFrom}&before=${this.dateTo}&per_page=100`;
+      const eventsUrl = `${apiUrl}/users/${currentUser.id}/events?after=${this.dateFrom}&before=${this.dateTo}&per_page=${eventsPerPage}`;
       const events: GitLabEvent[] = [];
 
       let page = 1;
@@ -220,7 +223,7 @@ export class GitLabActivityPageVM extends ViewModelBase {
           hasMore = parseInt(currentPage) < parseInt(totalPages);
         } else {
           // Fallback: если заголовков нет, проверяем по количеству событий
-          hasMore = pageEvents.length === 100;
+          hasMore = pageEvents.length === eventsPerPage;
         }
 
         page++;
