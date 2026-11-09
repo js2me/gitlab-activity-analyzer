@@ -1,5 +1,5 @@
 import ReactECharts from 'echarts-for-react';
-import { withViewModel } from 'mobx-view-model';
+import { withViewModel } from 'mobx-view-model-react';
 import { VList } from 'virtua';
 import { cx } from 'yummies/css';
 import { FiltersCard } from './components/filters-card';
