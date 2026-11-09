@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import { useViewModel } from 'mobx-view-model';
+import { useViewModel } from 'mobx-view-model-react';
 import { cx } from 'yummies/css';
 import { formatDate } from '../lib/date';
 import type { GitLabActivityPageVM } from '../model';
